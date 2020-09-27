@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-#include <PatchParser.hpp>
+#include <PatchParserCPP/PatchParser.hpp>
 #include "gtest/gtest.h"
 
 namespace

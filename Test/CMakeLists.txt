@@ -8,14 +8,10 @@ set(CMAKE_CXX_STANDARD 17)
 ###############
 add_subdirectory(googletest)
 
-
 ###############
 #Build test executable
 ###############
-include_directories(..)
-
-set(SOURCES ../PatchParser.hpp UnitTest/PatchParserTest.cpp)
+include_directories(../include)
+set(SOURCES ../include/PatchParserCPP/PatchParser.hpp UnitTest/PatchParserTest.cpp)
 add_executable(PatchParseTest ${SOURCES})
-
-target_compile_features(PatchParseTest PRIVATE cxx_std_17)
 target_link_libraries(PatchParseTest gtest gtest_main)
