@@ -176,6 +176,17 @@ public:
 		return true;
 	}
 
+
+	void SetAuthorName(std::string& author)
+	{
+		Author = author;
+	}
+
+	std::string GetAuthorName() const
+	{
+		return Author;
+	}
+
 	int GetLinesAdded() const
 	{
 		return LinesAddedCount;
@@ -193,6 +204,8 @@ public:
 
 private:
 	std::string RawPatch;
+	std::string Author;
+
 	std::vector<FileDelta> FileDeltas;
 
 	int FileChangeCount;
